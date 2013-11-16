@@ -33,9 +33,9 @@ def dev_dashboard(request):
 
 def project_detail(request,requested_project_id):
     project = Project.objects.filter(id=requested_project_id)
-    return HttpResponse("requested project id is  %s." % requested_project_id)
-#    return render_to_response(
-#	"project_detail.html", 
-#	{"project": project}
-#    )
+#    return HttpResponse("requested project id is  %s." % requested_project_id)
+    return render_to_response(
+	"project_detail.html", 
+	{"project": project}
+    )
     
