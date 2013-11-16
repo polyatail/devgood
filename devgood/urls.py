@@ -13,4 +13,5 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration_email.backends.default.urls')),
     url(r'^npo_dashboard', 'devgoodapp.views.npo_dashboard'),
     url(r'^dev_dashboard', 'devgoodapp.views.dev_dashboard'),
+    url(r'^project/(?P<requested_project_id>\d+)/$', 'devgoodapp.views.project_detail'),
 )
