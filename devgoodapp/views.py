@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, get_object_or_404
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from models import Developer, NPO, Project
@@ -30,3 +30,11 @@ def dev_dashboard(request):
         )
     else:
         return HttpResponse("You need to login")
+
+def project_detail(request,requested_project_id):
+    project = Project.objects.filter(project_id=requested_project_id)
+    return render_to_response(
+	"project_detail.html", 
+	{"project": project}
+    )
+    
