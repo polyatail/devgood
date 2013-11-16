@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'profiles',
     'social_auth',
     'messages',
+    'devgood',
 )
 
 MIDDLEWARE_CLASSES = (

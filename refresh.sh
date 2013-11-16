@@ -2,5 +2,5 @@
 
 while true; do
     sleep 1
-    git fetch
+    git pull
 done
