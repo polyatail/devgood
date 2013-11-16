@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'devgood.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url('', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration_email.backends.default.urls')),
 )

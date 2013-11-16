@@ -16,6 +16,7 @@ PROJECT_PATH = BASE_DIR
 
 TEMPLATE_DIRS = (
     PROJECT_PATH,
+    PROJECT_PATH + "/layout",
 )
 
 ##
