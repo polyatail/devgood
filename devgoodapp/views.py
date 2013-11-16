@@ -32,7 +32,7 @@ def dev_dashboard(request):
         return HttpResponse("You need to login")
 
 def project_detail(request,requested_project_id):
-    project = Project.objects.filter(id=1)
+    project = Project.objects.filter(id=2)
 #    return HttpResponse("requested project id is  %s." % project)
     return render_to_response(
 	"project_detail.html", 
