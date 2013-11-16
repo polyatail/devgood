@@ -7,7 +7,7 @@ Portfolio: {{ dev.portfolio_url }}
 About: {{ dev.about_me }}
 
 {% for project in projects %}
-ID: {{ project.id }}
+ID: <a href="/project/{{ project.id }}/"> {{ project.id }} </a>
 Status: {{ project.get_status_display }}
 Requested By: {{ project.requested_by }}
 Assigned To: {{ project.assigned_to }}
