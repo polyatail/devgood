@@ -18,6 +18,33 @@ TEMPLATE_DIRS = (
     PROJECT_PATH,
 )
 
+##
+## EMAIL
+##
+
+SERVER_EMAIL = "noreply@devgood.org"
+DEFAULT_FROM_EMAIL = "noreply@devgood.org"
+
+# debugging
+#EMAIL_HOST = "localhost"
+#EMAIL_PORT = 1025
+
+# nixt
+#EMAIL_HOST = "nixt.org"
+#EMAIL_PORT = 25
+#EMAIL_HOST_USER = "devgood%nixt.org"
+#EMAIL_HOST_PASSWORD = "Devgood2013"
+#EMAIL_USE_TLS = False
+
+# gmail
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "devgood1@gmail.com"
+EMAIL_HOST_PASSWORD = "Devgood2013"
+EMAIL_USE_TLS = True
+
+########################################
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/

@@ -1,0 +1,6 @@
+Thank you for registering for DevGood. Please click the below URL to confirm your e-mail address.
+
+http://{{ site }}/accounts/activate/{{ activation_key }}
+
+All the best,
+DevGood Staff
