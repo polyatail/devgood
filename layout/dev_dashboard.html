@@ -1,3 +1,15 @@
 <pre>
 Developer: {{ dev.id }}
+School: {{ dev.school }}
+Portfolio: {{ dev.portfolio_url }}
+About: {{ dev.about_me }}
 
+{% for project in projects %}
+ID: {{ project.id }}
+Status: {{ project.get_status_display }}
+Requested By: {{ project.requested_by }}
+Assigned To: {{ project.assigned_to }}
+Project Short: {{ project.project_short }}
+Project Long: {{ project.project_long }}
+Project Type: {{ project.get_project_type_display }}
+{% endfor %}
