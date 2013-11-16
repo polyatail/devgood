@@ -34,11 +34,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+ACCOUNT_ACTIVATION_DAYS = 7
 
 AUTHENTICATION_BACKENDS = (
-    'email_usernames.backends.EmailOrUsernameModelBackend',
-    'django.contrib.auth.backends.ModelBackend',
+    'registration_email.auth.EmailBackend',
 )
+
+LOGIN_REDIRECT_URL = '/'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -48,10 +50,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'registration_email',
     'profiles',
     'social_auth',
     'messages',
-    'email_usernames',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,8 +68,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'devgood.urls'
 
 WSGI_APPLICATION = 'devgood.wsgi.application'
-
-ACCOUNT_ACTIVATION_DAYS = 7
 
 
 # Database
