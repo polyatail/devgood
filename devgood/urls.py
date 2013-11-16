@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url('', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration_email.backends.default.urls')),
+    url(r'^npo_dashboard', 'devgoodapp.views.npo_dashboard'),
 )
