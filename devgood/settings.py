@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_PATH = BASE_DIR
+
+TEMPLATE_DIRS = (
+    PROJECT_PATH,
+)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -36,6 +42,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
+    'profiles',
+    'social_auth',
+    'messages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +60,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'devgood.urls'
 
 WSGI_APPLICATION = 'devgood.wsgi.application'
+
+ACCOUNT_ACTIVATION_DAYS = 7
 
 
 # Database
