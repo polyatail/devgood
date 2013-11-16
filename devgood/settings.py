@@ -79,7 +79,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration',
     'registration_email',
-    'profiles',
     'social_auth',
     'messages',
     'devgoodapp',
