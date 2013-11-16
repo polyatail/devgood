@@ -35,6 +35,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+AUTHENTICATION_BACKENDS = (
+    'email_usernames.backends.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +51,7 @@ INSTALLED_APPS = (
     'profiles',
     'social_auth',
     'messages',
+    'email_usernames',
 )
 
 MIDDLEWARE_CLASSES = (
