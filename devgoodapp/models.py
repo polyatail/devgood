@@ -4,18 +4,18 @@ from django.contrib.auth.models import User
 class Developer(models.Model):
     user = models.ForeignKey(User)
 
-    school = models.CharField(max_length=1024)
-    skills = models.CharField(max_length=2048)
-    portfolio_url = models.CharField(max_length=1024)
-    about_me = models.CharField(max_length=2048)
+    school = models.CharField(max_length=1024, blank=True)
+    skills = models.CharField(max_length=2048, blank=True)
+    portfolio_url = models.CharField(max_length=1024, blank=True)
+    about_me = models.CharField(max_length=2048, blank=True)
 
 class NPO(models.Model):
     user = models.ForeignKey(User)
 
-    npo_name = models.CharField(max_length=1024)
-    npo_url = models.CharField(max_length=1024)
-    mission_short = models.CharField(max_length=1024)
-    mission_long = models.CharField(max_length=2048)
+    npo_name = models.CharField(max_length=1024, blank=True)
+    npo_url = models.CharField(max_length=1024, blank=True)
+    mission_short = models.CharField(max_length=1024, blank=True)
+    mission_long = models.CharField(max_length=2048, blank=True)
 
 class Project(models.Model):
     name = models.CharField(max_length=140)
