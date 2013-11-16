@@ -1,1 +1,7 @@
-{{ project }}
+ID: {{ project.id }}
+Status: {{ project.get_status_display }}
+Requested By: {{ project.requested_by }}
+Assigned To: {{ project.assigned_to }}
+Project Short: {{ project.project_short }}
+Project Long: {{ project.project_long }}
+Project Type: {{ project.get_project_type_display }}
